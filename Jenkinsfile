@@ -7,7 +7,7 @@ def app
      checkout scm
  }
 
-  stage('Build image('getintodevops-hellonode-master/getintodevops-hellonode-master')') {
+  stage('Build image('bnannavaredocker123/example.app')') {
  app = docker.build()
  }
 
