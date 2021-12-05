@@ -1,0 +1,20 @@
+node {
+
+def app 
+ 
+
+ stage('Clone repository') {
+     checkout scm
+ }
+
+  stage('Build image('getintodevops-hellonode-master/getintodevops-hellonode-master')') {
+ app = docker.build()
+ }
+
+
+ stage('Push image') {
+ app = docker.WithRegistry('https://registry.hub.docker.com','docker-hub-credentials')
+ app.push('latest')
+ }
+
+}
