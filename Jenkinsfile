@@ -7,7 +7,7 @@ def app
      checkout scm
  }
 
-  stage('Build image('example.app')') {
+  stage('Build image("bnannavaredocker123/example.app")') {
  app = docker.build()
  }
 
